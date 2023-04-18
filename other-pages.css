@@ -1,0 +1,79 @@
+.bg_hero {
+    background: center no-repeat url(./img/anout-banner.png);
+    background-size: cover;
+    max-width: 1350px;
+    margin: 0px auto;
+}
+.h1 {
+    font-family: "Heebo";
+
+}
+.about_content {padding: 180px 0px 140px;}
+.about_content h2 {
+    font-weight: 700;
+    font-size: 56px;
+}
+.about_content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+}
+.about-content {gap: 20px;}
+.about-aim .container {justify-items: flex-start;}
+.test-content{
+    margin-block-end: 50px;
+    gap: 30px;
+}
+.testi-img {grid-template-columns: 1fr;}
+.testi-img img {max-width: 600px;}
+.end {justify-self: self-end;}
+.start {justify-self: self-start;}
+
+
+.form-section {padding-top: 100px;}
+
+.form-cont .title {padding-bottom: 50px;}
+.form-cont .title h3 {padding-bottom: 30px;}
+
+.form {gap: 30px;}
+.form input, .form textarea, select {
+    outline: none;
+    border: 1px solid #C4C4C4;
+    padding: 14px 20px;
+    max-width: 500px;
+    width: 100%;
+    color: var(--black);
+}
+.para span {color: var(--red);}
+.contact-img .vector-img {max-width: 400px;}
+.grid {
+    display: grid;
+    gap: 40px;
+}
+.call-icon {
+    width: 27px;
+}
+
+/* WORK */
+.works {padding-top: 100px;}
+.works-titles {gap: 30px;}
+.works-titles h3 {
+    font-family: "Nunito";
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black);
+}
+.works-titles h3:hover {color: var(--red);}
+.work-img img {
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {    
+    .contact-img .vector-img {
+        justify-self: center;
+    }
+}
+@media (max-width: 600px) {
+    .about_content h2 {font-size: 40px;}
+}

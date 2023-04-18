@@ -1,0 +1,519 @@
+@font-face {
+    font-family: "Heebo";
+    src: url(/font/h/static/Heebo-Medium.ttf) format('truetype');
+    src: url(/font/h/static/Heebo-Regular.ttf) format('truetype');
+    src: url(/font/h/static/Heebo-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: "Nunito";
+    src: url(/font/Nunito/static/Nunito-Regular.ttf) format('truetype');
+    src: url(/font/Nunito/static/Nunito-Medium.ttf) format('truetype');
+    src: url(/font/Nunito/static/Nunito-Bold.ttf) format('truetype');
+}
+*,*::before,*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Heebo", "Nunito";
+    font-size: 16px;
+    color: #FFFFFF;
+}
+:root {
+    --black: #000000;
+    --yellow: #FFC20F;
+    --red: #ED1B24;
+    --white: #FFFFFF;
+}
+
+/* RESET */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {list-style: none;}
+button, textarea {
+    border: none;
+    outline: none;
+}
+
+
+/* REUSE */
+.padd-100 {padding: 100px 0px 150px !important;}
+.container {
+    max-width: 1270px;
+    margin: 0px auto;
+    padding-inline: 20px;
+}
+.btn {
+    font-weight: bold;
+    font-size: 16px;
+    width: 140px;
+    height: 49px;
+    cursor: pointer;
+}
+.btn:hover {
+    font-size: 14px;
+    box-shadow: 0px 0px 10px var(--yellow);
+}
+.btn-yellow {
+    background-color: var(--yellow);
+    color: var(--black);
+    border-radius: 10px;
+}
+.flex {display: flex;}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-btw {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.grid-1frs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+/* .fitCont {max-width: fit-content;} */
+img {width: 100%;}
+.Heebo {font-family: "Heebo";}
+.Nunito {font-family: "Nunito";}
+.margin-150px {margin-top: 150px;}
+.margin-100px {margin-top: 100px;}
+.padding-150px {padding-top: 150px;}
+
+/* ======= NAV  =======*/
+
+/* Top nav */
+.header {
+    position: relative;
+    z-index: 6;
+    transition: 0.3ms all ease-in-out;
+}
+.nav-contact { 
+    padding-block: 20px;
+    background-color: var(--red);
+    transition: 0.3ms all ease-in-out;
+}
+.direct-contact { gap: 49px; }
+.mobile, .email { gap: 10px; }
+.nav-para {
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 16px;
+}
+.call {
+    width: 21px;
+    height: 27px;
+}
+.email-icon {
+    height: 21px;
+    width: 27px;
+}
+.social-contact { gap: 18px; } 
+.social-contact img { 
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+.social-contact img:hover {background-color: var(--black);}
+.nav-contact.none, .none {display: none;}
+.header.fixed {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 6;
+}
+.menu-icons, .toggle-menu, .close{display: none;}
+
+/* NavBar */
+.navBar {padding-block: 10px;}
+.logo img {
+    height: 50px;
+}
+.nav-list {gap: 11px;}
+.nav-item {padding-inline: 10px;}
+.nav-item a {
+    font-family: "Nunito";
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--black);
+}
+.nav-item a:hover, .nav-item .active {color: #FFC20F}
+.navBar button {
+    background-color: var(--red);
+    border-radius: 10px;
+    padding: 20px 40px;
+    cursor: pointer;
+}
+.navBar button:hover {box-shadow: 0px 0px 10px var(--red);}
+.navBar button a {
+    font-family: "Heebo";
+    font-weight: 500;
+    color: var(--white);
+}
+.other-nav {display: none;}
+
+/* HERO */
+.hero {padding: 250px 0px 150px;}
+.hero .container {gap: 100px;}
+.hero-content { flex-direction: column; }
+.h1-header {
+    font-size: 25px;
+    font-family: "Heebo";
+    font-weight: bold;
+    color: var(--black);
+    padding-bottom: 30px;
+}
+.play {
+    gap: 10px;
+    cursor: pointer;
+}
+.play img {
+    width: 45px;
+    height: 45px;
+}
+.play p {
+    font-size: 16px;
+    font-family: "Heebo";
+    font-weight: bold;
+    color: var(--black);
+}
+.h2-header  {
+    font-size: 40px;
+    font-family: "Heebo";
+    font-weight: bold;
+    color: var(--black);
+}
+.btn-cont  {
+    padding-top: 60px;
+    max-width: fit-content;
+    gap: 40px;
+}
+
+/* SERVICE */
+.services-cont {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+.services-item {
+    padding: 40px;
+    border: 1px solid #CACACA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.no {
+    font-family: "Heebo";
+    color: var(--black);
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.title {
+    font-family: "Heebo";
+    color: var(--black);
+    font-size: 25px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.para {
+    font-family: "Nunito";
+    font-size: 18px;
+    font-weight: normal;
+    color: #767575;
+}
+.third-item {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    height: fit-content;
+    align-self: center;
+}
+.para-2 {
+    font-family: "Nunito";
+    font-size: 18px;
+    font-weight: normal;
+    color: #A3A3A3;
+    padding: 40px 0px 60px;
+}
+
+/* AIM */
+.aim {padding-top: 100px;}
+.aim .para-2 {text-transform: capitalize;}
+/* .aim .container {
+    justify-items: self-end;
+} */
+
+/* PROJECTS */
+
+.img-cont-item {position: relative;}
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 37px;
+}
+.overlay {
+    height: 100%;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 50px;
+    padding-inline: 30px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    display: none;
+}
+.img-cont-item:hover .overlay  {display: flex;}
+.overlay h4 {
+    font-size: 30px;
+    font-family: "Heebo";
+    font-weight: bolder;
+    color: #FFF;
+}
+.overlay p {
+    font-family: "Heebo";
+    font-size: 20px;
+    color: var(--yellow);
+    font-weight: bold;
+}
+.overlay .black {color: var(--black);}
+.img-cont-item .feature {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.feature-cont {
+    background-color: #FFFFFF;
+    border: 1px solid #CACACA;
+}
+.feature h4 {text-align: center;}
+
+/* TEAM */
+.item-cont {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+
+}
+.team-title {
+    flex-direction: column;
+    margin-bottom: 90px;
+}
+.team-items {position: relative;}
+.team-items p {
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    font-size: 20px;
+    left: 20px;
+    font-weight: 500;
+    font-family: "Heebo";
+}
+.team-title h2 {padding-bottom: 20px;}
+.aim
+
+/* EXPERIECE */
+.experience .container {gap: 90px;}
+.exp-img {
+    max-width: fit-content;
+    height: 500px;
+}
+.exp-img img {height: 100%;}
+.experience-content {
+    flex-direction: column;
+    gap: 30px;
+}
+.ticks {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    width: 100%;
+}
+.ticks-item {
+    gap: 20px;
+    justify-content: initial;
+}
+.ticks-item img {
+    width: 20px;
+    height: 20px;
+}
+.ticks-item p {
+    font-size: 18px;
+    font-family: "Heebo";
+    color: var(--black);
+}
+.experience-content button {align-self: flex-start;}
+
+
+/* FOOTER */
+.footer {
+    background-color: var(--red);
+    padding: 80px 0px 0px;
+}
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-block-end: 20px;
+}
+.footer-menu {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+.footer-items {gap: 30px;}
+.footer-items a {
+    font-family: "Nunito";
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+.footer .logo {
+    padding-bottom: 30px;
+    width: 156px;
+}
+.h3 {
+    font-family: "Heebo";
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+.socials {
+    gap: 30px;
+    text-align: left;
+    align-items: center;
+    max-width: 400px;
+}
+.socials .social-contact {justify-content: initial;}
+.socials h3 {
+    padding-bottom: 30px;
+}
+.socials input {
+    border: none;
+    font-size: 16px;
+    color: #A3A3A3;
+    font-family: "Nunito";
+    border-radius: 11px;
+    padding: 15px 20px;
+    outline: none;
+}
+.socials button {align-self: flex-start;}
+.newsletter {align-items: flex-start;}
+.copyright {background-color: #fff;}
+.copy-logo-cont {
+    margin: 0px auto;
+    padding: 10px 10px;
+    max-width: 1250px;
+    display: flex;
+    align-items: center;
+}
+.copy-logo {height: 20px;}
+.copy-logo img {height: 100%;}
+.copy-logo-cont p {
+    font-size: 14px;
+    color: grey;
+}
+.footer-items a:hover {color: var(--black);}
+
+
+@media (max-width: 991px) {
+    .navBar {
+        height: 80px;
+        position: relative;
+    }
+    .data-navItem {display: none;}
+    .menu-icons, .toggle-menu {
+        display: block;
+    }
+    .toggle-menu {
+        background-color: var(--red);
+        display: flex;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .other-nav {
+        position: absolute;
+        display: flex;
+        top: 80px;
+        left: -1000px;
+        background-color: #fff;
+        padding: 50px;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+        height: 60vh;
+        opacity: 0;
+        transition: 1s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    .other-nav.show {
+        left: 0px;
+        opacity: 1;
+    }
+    .nav-list {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .h1-header{font-size: 20px;}
+    .h2-header {font-size: 30px;}
+    .services-cont{gap: 20px;}
+    .footer .container {grid-template-columns: repeat(2, 1fr);}
+}
+@media (max-width: 900px) {
+    .services-cont {
+        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .third-item {order: -1;}
+    .img-container{grid-template-columns: repeat(2, 1fr);}
+}
+@media (max-width: 768px) {
+    .nav-contact {display: none;}
+    .grid-1frs {grid-template-columns: 1fr}
+    .aim .container{justify-items: center;}
+    .item-cont{grid-template-columns: repeat(2, 1fr);}
+    .aim-img{
+        order: 1;
+        justify-self: center;
+    }
+    .overlay h4 {font-size: 25px;}
+    .footer .container {grid-template-columns: repeat(1, 1fr);}
+    .socials {align-items: initial;}
+}
+@media (max-width: 600px) {
+    .overlay h4 {font-size: 20px;}
+    .about_content h2 {font-size: 40px;}
+}
+@media (max-width: 560px) {
+    .services-cont, .item-cont, .img-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .feature-cont {
+        max-width: 430px;
+        height: 250px;
+        order: -1;
+    }
+    .aim .para-2 {font-size: 18px;}
+    .services-item {padding: 20px;}
+    .h2-header {font-size: 25px;}
+    .h1-header {font-size: 18px;}
+}
+@media (max-width: 400px) {
+    .btn-cont{flex-direction: column;}
+    .title{font-size: 20px;}
+    .para{font-size: 16px;}
+    .aim .para-2 {font-size: 16px;}
+    .ticks-item p{font-size: 16px;}
+}
